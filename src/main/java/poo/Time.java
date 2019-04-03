@@ -13,23 +13,23 @@ public class Time {
     private boolean flag;
 
     public Time(int h){     //construtor caso seja fornecido apenas hora
-
         this.min = 00;
         this.seg = 00;
-        if (h >= 0  && h < 60 ){
-            this.hora = h;
-        }else this.hora = 00;
+        verificaHora(h, 0 , 0);
     }
 
     public Time(int h, int m){      //construtor caso seja fornecido apenas minuto
         this.seg = 00;
-        if(m >= 0  && m < 60){
-            this.min = m;
-        }else this.min = 00;
+        verificaHora(h, m, 0);
     }
 
     public Time(int h, int m, int s){   // construtor com todos componente da hora fornecidos
-        if (h >= 0  && h < 60 ){
+        verificaHora(h, m, s);
+    }
+    //----------------------------------------------------------------------------------------------------------------
+
+    private void verificaHora(int h,int m,int s){       //classe responsável por estabelecer as condições necessarias para as ntradas serem consideradas
+        if (h >= 0  && h < 60 ){                        //um horário, e caso não atenda os requisitos toma os devidos tratamentos
             this.hora = h;
         }else this.hora = 00;
 
@@ -40,23 +40,7 @@ public class Time {
         if(s >= 0  && s < 60){
             this.seg = s;
         }else this.seg = 00;
-
     }
-    //----------------------------------------------------------------------------------------------------------------
-
-//    private void verificaHora(int h,int m,int s){
-//        if (h >= 0  && h <= 60 ){
-//            this.hora = h;
-//        }else this.hora = 00;
-//
-//        if(m >= 0  && m <= 60){
-//            this.min = m;
-//        }else this.min = 00;
-//
-//        if(s >= 0  && s <= 60){
-//            this.seg = s;
-//        }else this.seg = 00;
-//    }
 
 
 
