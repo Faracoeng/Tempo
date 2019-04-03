@@ -87,6 +87,7 @@ public class Time {
     }
 
     //------------------------------------------------------------------------------------------------------------------
+    //Método diminui horário que vem por parâmetro pelo horario da classe, retorna a diferença em segundos
     public long diferenca(Time outroHorario){
         return tempoEmSegundos() - Long.valueOf(outroHorario.hora*3600+outroHorario.min*60+outroHorario.seg);
 
