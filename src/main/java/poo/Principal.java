@@ -13,8 +13,10 @@ public class Principal {
         int segundos = teclado.nextInt();
 
         Time relogio = new Time(hora, minutos, segundos );
-        String str = relogio.toString();
-        System.out.println(str);
+        System.out.println(relogio.alteraHora(6));
+        System.out.println(relogio.alteraMinuto(6));
+        System.out.println(relogio.alteraSegundos(-5));
+        System.out.println(relogio.toString());
 
     }
 }

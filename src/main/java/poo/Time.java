@@ -53,8 +53,28 @@ public class Time {
         String horario = String.valueOf(this.hora) + ":" + String.valueOf(this.min) + ":" + String.valueOf(this.seg);
         return horario;
     }
-
+    //Altera apenas a hora caso atenda os requisitos necessários
     public boolean alteraHora(int novaHora){
-        return true;
+        if(novaHora >= 0  && novaHora < 60){
+            this.hora = novaHora;
+            return true;
+        }
+        return false;
+    }
+    //Altera apenas o minuto caso atenda os requisitos necessários
+    public boolean alteraMinuto(int novoMinuto){
+        if(novoMinuto >= 0  && novoMinuto < 60){
+            this.min = novoMinuto;
+            return true;
+        }
+        return false;
+    }
+    //Altera apenas o horário caso atenda os requisitos necessários
+    public boolean alteraSegundos(int novoSegundo){
+        if(novoSegundo >= 0  && novoSegundo < 60){
+            this.hora = novoSegundo;
+            return true;
+        }
+        return false;
     }
 }
