@@ -29,7 +29,7 @@ public class Time {
     //------------------------------------------------------------------------------------------------------------------
 
     private void verificaHora(int h,int m,int s){       // classe responsável por estabelecer as condições necessarias
-        if (h >= 0  && h < 60 ){                       // para as ntradas serem consideradas um horário, e caso não
+        if (h >= 0  && h < 25 ){                       // para as ntradas serem consideradas um horário, e caso não
             this.hora = h;                            // atenda os requisitos toma os devidos tratamentos
         }else this.hora = 00;
 
